@@ -21,3 +21,7 @@ Optional step if you want to edit the configurations in `config/`.
 
 - `v1`: Raspberry Pi Zero W
 - `v2`: Raspberry Pi Zero 2 W
+
+## Build all kernels at once
+
+`./build-all.sh`
