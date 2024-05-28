@@ -25,3 +25,6 @@ Optional step if you want to edit the configurations in `config/`.
 ## Build all kernels at once
 
 `./build-all.sh`
+
+The result will be a .tar.gz in the `out/` folder. Copy this file to the OS builder,
+as `stage0/02-firmware/files/kernel.tar.gz` and generate a new image.
