@@ -14,14 +14,12 @@ function download_sources {
 if [ "$1" == "v1" ]; then
     # Raspberry Pi Zero W
     KERNEL=kernel
-    KERNEL_OUT=kernel-v1.img
     ARCH=arm
     DEFCONFIG=bcmrpi_defconfig
     CUSTOM_CONFIG_FILE=config/.config
 elif [ "$1" == "v2" ]; then
     # Raspberry Pi Zero 2 W 32-bit
     KERNEL=kernel7
-    KERNEL_OUT=kernel-v2.img
     ARCH=arm
     DEFCONFIG=bcm2709_defconfig
     CUSTOM_CONFIG_FILE=config/.config
