@@ -11,17 +11,21 @@ function download_sources {
     cp $CUSTOM_CONFIG_FILE build/.config
 }
 
-if [ "$1" == "v1" ]; then
+if [ "$1" == "kernel" ]; then
     # Raspberry Pi Zero W
     KERNEL=kernel
     ARCH=arm
     DEFCONFIG=bcmrpi_defconfig
     CUSTOM_CONFIG_FILE=config/.config
-elif [ "$1" == "v2" ]; then
-    # Raspberry Pi Zero 2 W 32-bit
+elif [ "$1" == "kernel7" ]; then
     KERNEL=kernel7
     ARCH=arm
     DEFCONFIG=bcm2709_defconfig
+    CUSTOM_CONFIG_FILE=config/.config
+elif [ "$1" == "kernel7l" ]; then
+    KERNEL=kernel7l
+    ARCH=arm
+    DEFCONFIG=bcm2711_defconfig
     CUSTOM_CONFIG_FILE=config/.config
 else
     echo "Usage: $0 [ v1 | v2 ]"

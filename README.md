@@ -1,6 +1,6 @@
 # Build a linux kernel for Pi-OS
 
-Based on https://www.raspberrypi.com/documentation/computers/linux_kernel.html#getting-your-code-into-the-kernel
+Based on https://www.raspberrypi.com/documentation/computers/linux_kernel.html#getting-your-code-into-the-kernel and https://github.com/theAndreas/raspberrypi-kernel64-rt/tree/master
 
 ## Install dependencies
 
@@ -10,21 +10,14 @@ Based on https://www.raspberrypi.com/documentation/computers/linux_kernel.html#g
 
 Optional step if you want to edit the configurations in `config/`.
 
-`./configure.sh [v1, v2]`
+`./configure.sh [kernel, kernel7l]`
 
-- `v1`: Raspberry Pi Zero W
-- `v2`: Raspberry Pi Zero 2 W
+- `kernel`: Raspberry Pi Zero W
+- `kernel7`: Raspberry Pi Zero 2 W
 
-## Build kernel
-
-`./build.sh [v1, v2]`
-
-- `v1`: Raspberry Pi Zero W
-- `v2`: Raspberry Pi Zero 2 W
-
-## Build all kernels at once
+## Build kernels
 
 `./build-all.sh`
 
-The result will be a .tar.gz in the `out/` folder. Copy this file to the OS builder,
-as `stage0/02-firmware/files/kernel.tar.gz` and generate a new image.
+The result will be a .deb in the `deb-package/` folder. Copy this file to the OS builder,
+as `stage0/02-firmware/files/raspberrypi-kernel_armhf.deb` and generate a new image.
