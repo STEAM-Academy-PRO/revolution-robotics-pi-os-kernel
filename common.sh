@@ -45,8 +45,12 @@ fi
 
 
 ROOT_DIR=`pwd`
-BUILD_DIR=$ROOT_DIR/build
+BUILD_DIR=$ROOT_DIR/build/$KERNEL
 INSTALL_DIR=$ROOT_DIR/install
 
 mkdir $BUILD_DIR || true
 mkdir -p $INSTALL_DIR/boot/overlays || true
+
+download_sources
+
+cp $ROOT_DIR/$CUSTOM_CONFIG_FILE $BUILD_DIR/.config

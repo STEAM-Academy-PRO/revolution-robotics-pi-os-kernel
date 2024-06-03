@@ -2,10 +2,8 @@
 
 source ./common.sh $1
 
-download_sources
 cd linux
 
-cp $ROOT_DIR/$CUSTOM_CONFIG_FILE $BUILD_DIR/.config
 make O=$BUILD_DIR ARCH=$ARCH CROSS_COMPILE=$TOOLCHAIN -j8 $IMAGE modules dtbs
 
 make O=$BUILD_DIR INSTALL_MOD_PATH=$INSTALL_DIR modules_install
