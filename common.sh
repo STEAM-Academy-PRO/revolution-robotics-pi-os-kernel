@@ -21,12 +21,12 @@ elif [ "$1" == "kernel7" ]; then
     KERNEL=kernel7
     ARCH=arm
     DEFCONFIG=bcm2709_defconfig
-    CUSTOM_CONFIG_FILE=config/.config
+    CUSTOM_CONFIG_FILE=config/.config-7
 elif [ "$1" == "kernel7l" ]; then
     KERNEL=kernel7l
     ARCH=arm
     DEFCONFIG=bcm2711_defconfig
-    CUSTOM_CONFIG_FILE=config/.config
+    CUSTOM_CONFIG_FILE=config/.config-7l
 else
     echo "Usage: $0 [ v1 | v2 ]"
     exit 1
