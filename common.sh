@@ -7,8 +7,6 @@ function download_sources {
     else
         git clone --depth=1 -b rpi-6.1.y https://github.com/raspberrypi/linux
     fi
-
-    cp $CUSTOM_CONFIG_FILE build/.config
 }
 
 if [ "$1" == "kernel" ]; then
@@ -34,7 +32,7 @@ fi
 
 if [ "$ARCH" == "arm" ]; then
     TOOLCHAIN=arm-linux-gnueabihf-
-    IMAGE=zImage
+    IMAGE=Image
     DTS_SUBDIR=
 elif [ "$ARCH" == "arm64" ]; then
     TOOLCHAIN=aarch64-linux-gnu-
